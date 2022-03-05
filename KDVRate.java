@@ -12,7 +12,7 @@ public class KDVRate {
         priceWithKDV = realPrice + kdvPrice;
 
         System.out.println("The price of the product without KDV is $" + realPrice);
-        System.out.println("The KDV rate is $" + kdvRate);
+        System.out.println("The KDV rate is " + kdvRate);
         System.out.println("The kdv is $" + kdvPrice);
         System.out.println("The price of the product with KDV is $" + priceWithKDV);
     }

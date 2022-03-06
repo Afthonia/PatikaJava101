@@ -2,7 +2,7 @@ package Practices;
 
 import java.util.Scanner;
 
-public class BiggerToSmaller {
+public class GreaterToSmaller {
     public static void main(String[] args) {
         int num1, num2, num3;
 

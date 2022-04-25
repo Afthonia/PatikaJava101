@@ -10,10 +10,12 @@ public class Combination {
 
         return product;
     }
+    
     public static double combination(int x, int y) {
         double com = factorial(x) / ((factorial(y) * factorial(x-y)));
         return com;
     }
+    
     public static void main (String[] args) {
         Scanner scan = new Scanner(System.in);
 

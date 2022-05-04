@@ -12,6 +12,7 @@ public class PowerOfTheNumber2 {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Let's calculate the power of a number! \n");
+        
         System.out.print("Gimme the base: ");
         base = scan.nextInt();
 

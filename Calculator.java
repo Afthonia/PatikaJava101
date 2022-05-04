@@ -16,7 +16,7 @@ public class Calculator {
         System.out.println("The result is " + result);
     }
 
-    static void divide(int a, int b) {
+    static void divide(double a, double b) {
         if (b == 0)
             System.out.println("Undefined");
         else {
@@ -38,9 +38,14 @@ public class Calculator {
         System.out.println("The mod is " + result);
     }
 
-    static void rec(int edge1, int edge2) {
+    static void recArea(int edge1, int edge2) {
         int area = edge1 * edge2;
         System.out.println("The area is " + area);
+    }
+
+    static void recPerimeter(int edge1, int edge2) {
+        int perimeter = 2 * (edge1 + edge2);
+        System.out.println("The perimeter is " + perimeter);
     }
 
     public static void main(String[] args) {
@@ -52,7 +57,8 @@ public class Calculator {
                       "4- Division \n" +
                       "5- Power \n" +
                       "6- Mod \n" +
-                      "7- Rectangle Area and Perimeter \n" +
+                      "7- Rectangle Area \n" +
+                      "8- Rectangle Perimeter \n" +
                       "0- Exit";
         while (true) {
             System.out.println("\n" + menu);
@@ -62,10 +68,10 @@ public class Calculator {
             if (select == 0)
                 break;
 
-            System.out.print("Please enter the first " + ((select==7) ? "edge: " : "number: "));
+            System.out.print("Please enter the first " + ((select==7 || select == 8) ? "edge: " : "number: "));
             int num1 = inp.nextInt();
 
-            System.out.print("Please enter the second" + ((select==7) ? "edge: " : "number: "));
+            System.out.print("Please enter the second" + ((select==7 || select == 8) ? "edge: " : "number: "));
             int num2 = inp.nextInt();
 
             switch (select) {
@@ -75,8 +81,7 @@ public class Calculator {
                 case 4 -> divide(num1 , num2);
                 case 5 -> power(num1 , num2);
                 case 6 -> mod(num1 , num2);
-                case 7 -> rec(num1 , num2);
+                case 7 -> recArea(num1 , num2);
+                case 8 -> recPerimeter(num1, num2);
             }
         }
-    }
-}

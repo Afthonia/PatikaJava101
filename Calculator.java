@@ -68,10 +68,10 @@ public class Calculator {
             if (select == 0)
                 break;
 
-            System.out.print("Please enter the first " + ((select==7 || select == 8) ? "edge: " : "number: "));
+            System.out.print("Please enter the " + ((select==7 || select == 8) ? "first edge: " : ((select == 5) ? "base: " : "first number: ")));
             int num1 = inp.nextInt();
 
-            System.out.print("Please enter the second" + ((select==7 || select == 8) ? "edge: " : "number: "));
+            System.out.print("Please enter the " + ((select==7 || select == 8) ? "second edge: " : ((select == 5) ? "power: " : "second number: ")));
             int num2 = inp.nextInt();
 
             switch (select) {
